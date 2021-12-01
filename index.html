@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  
+  <link rel="stylesheet" href="./assets/css/style.css" />
+ 
+  <title>Project Tracker</title>
+</head>
+
+<body>
+    <header class="container-fluid bg-dark text-light text-end pb-1 mb-2">
+        <h1 class="display-1">Project Tracker</h1>
+        <p class="font-weight-bold" id="datetime"></p>
+    </header>
+    <main class="row">
+    <section class="card col-12 col-md-3 text-center mx-1">
+        <h2 class="card-header">How to</h2>
+        <p class="card-body">Click the button below and complete the information required to add a new project</p>
+        <div class="footer">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
+                Add project
+              </button>
+        </div>
+    </section>
+
+    <section class="col-12 col-md-8 mz-1" id="table-section">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th>Project Name</th>
+                <th>Project type</th>
+                <th>Hourly wage</th>
+                <th>Due date</th>
+                <th>Days until the due date</th>
+                <th>Estimated total earned</th>
+              </tr>
+            </thead>
+            <tbody id="table-container">
+              
+            </tbody>
+          </table>
+    </section>
+
+   
+
+    
+    
+    </main>    
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+  
+            <div class="modal-header bg-dark">
+              <h4 class="modal-title text-light">
+                  Fill the following data</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+  
+            <div class="modal-body">
+              <form id="new-project" action=index.html>
+                  <div class="mb-3 mt-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                  </div>
+                  <div class="mb-3 mt-3">
+                      <label for="select" class="form-label">Type of project:</label>
+                      <select id="project-type"class="form-select">
+                        <option value="Web Application (Front End)">Web Application (Front End)</option>
+                        <option value="Web Application (Back End)">Web Application (Back End)</option>
+                        <option value="Web Application (Full Stack)">Web Application (Full Stack)</option>
+                        <option value="Mobile Application">Mobile Application</option>
+                        <option value="Print Campaign">Print Campaign</option>
+                        <option value="Digital Marketing Campaign">Digital Marketing Campaign</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 mt-3">
+                      <label for="wage" class="form-label">Hourly Wage:</label>
+                      <input type="number" class="form-control" id="wage" placeholder="Hourly wage" name="wage">
+                    </div> 
+                  <div class="mb-3 mt-3">
+                      <label for="datepicker" class="form-label">Due date:</label>
+                      <input type="text" class="form-control" id="datepicker" placeholder="Due date" name="datepicker">
+                  </div>
+                
+              
+                  <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" id="submit-form-project">Submit</button>
+                </form>
+            </div>
+  
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+  
+
+ 
+</body>
+
+
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</html>
